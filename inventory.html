@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory - STRAD and Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <span>📧 info@stradandco.com</span>
+                <span>📞 +1 (555) 123-4567</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">STRAD</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="inventory.html" class="active">Inventory</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="inquire.html" class="cta-button">Inquire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Current Inventory</h1>
+            <p>Premium vehicles available for immediate import or export</p>
+        </div>
+    </section>
+
+    <!-- Inventory Grid -->
+    <section class="container">
+        <div class="inventory-filters">
+            <div class="filter-group">
+                <label>Category:</label>
+                <select>
+                    <option>All Vehicles</option>
+                    <option>Luxury</option>
+                    <option>Sports</option>
+                    <option>SUV</option>
+                    <option>Classic</option>
+                    <option>Commercial</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Location:</label>
+                <select>
+                    <option>All Locations</option>
+                    <option>USA</option>
+                    <option>Europe</option>
+                    <option>Japan</option>
+                    <option>UAE</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Price Range:</label>
+                <select>
+                    <option>All Prices</option>
+                    <option>Under $50k</option>
+                    <option>$50k - $100k</option>
+                    <option>$100k - $200k</option>
+                    <option>$200k+</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="inventory-grid">
+            
+            <!-- Vehicle 1 -->
+            <div class="inventory-card">
+                <div class="inventory-image">
+                    <div class="inventory-badge">Available</div>
+                </div>
+                <div class="inventory-details">
+                    <h3>2023 Mercedes-Benz S-Class</h3>
+                    <div class="vehicle-specs">
+                        <span>📍 Germany</span>
+                        <span>⚙️ Automatic</span>
+                        <span>⛽ Petrol</span>
+                    </div>
+                    <p class="vehicle-description">Luxury sedan with cutting-edge technology and supreme comfort. Low mileage, full service history.</p>
+                    <div class="inventory-footer">
+                        <div class="price">$145,000</div>
+                        <a href="inquire.html" class="btn-small">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle 2 -->
+            <div class="inventory-card">
+                <div class="inventory-image">
+                    <div class="inventory-badge">Available</div>
+                </div>
+                <div class="inventory-details">
+                    <h3>2022 Porsche 911 Carrera</h3>
+                    <div class="vehicle-specs">
+                        <span>📍 USA</span>
+                        <span>⚙️ Manual</span>
+                        <span>⛽ Petrol</span>
+                    </div>
+                    <p class="vehicle-description">Iconic sports car with exceptional performance. Perfect condition, enthusiast owned.</p>
+                    <div class="inventory-footer">
+                        <div class="price">$135,000</div>
+                        <a href="inquire.html" class="btn-small">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle 3 -->
+            <div class="inventory-card">
+                <div class="inventory-image">
+                    <div class="inventory-badge">Available</div>
+                </div>
+                <div class="inventory-details">
+                    <h3>2024 Range Rover Sport</h3>
+                    <div class="vehicle-specs">
+                        <span>📍 UK</span>
+                        <span>⚙️ Automatic</span>
+                        <span>⛽ Hybrid</span>
+                    </div>
+                    <p class="vehicle-description">Premium SUV combining luxury and capability. Latest model with all options included.</p>
+                    <div class="inventory-footer">
+                        <div class="price">$125,000</div>
+                        <a href="inquire.html" class="btn-small">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle 4 -->
+            <div class="inventory-card">
+                <div class="inventory-image">
+                    <div class="inventory-badge reserved">Reserved</div>
+                </div>
+                <div class="inventory-details">
+                    <h3>2021 Lexus LX 570</h3>
+                    <div class="vehicle-specs">
+                        <span>📍 UAE</span>
+                        <span>⚙️ Automatic</span>
+                        <span>⛽ Petrol</span>
+                    </div>
+                    <p class="vehicle-description">Full-size luxury SUV with legendary reliability. Low mileage, GCC specs.</p>
+                    <div class="inventory-footer">
+                        <div class="price">$89,000</div>
+                        <a href="inquire.html" class="btn-small">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle 5 -->
+            <div class="inventory-card">
+                <div class="inventory-image">
+                    <div class="inventory-badge">Available</div>
+                </div>
+                <div class="inventory-details">
+                    <h3>2023 BMW M4 Competition</h3>
+                    <div class="vehicle-specs">
+                        <span>📍 Germany</span>
+                        <span>⚙️ Automatic</span>
+                        <span>⛽ Petrol</span>
+                    </div>
+                    <p class="vehicle-description">High-performance coupe with aggressive styling. Track-ready with street comfort.</p>
+                    <div class="inventory-footer">
+                        <div class="price">$95,000</div>
+                        <a href="inquire.html" class="btn-small">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle 6 -->
+            <div class="inventory-card">
+                <div class="inventory-image">
+                    <div class="inventory-badge">Available</div>
+                </div>
+                <div class="inventory-details">
+                    <h3>1995 Toyota Land Cruiser FZJ80</h3>
+                    <div class="vehicle-specs">
+                        <span>📍 Japan</span>
+                        <span>⚙️ Automatic</span>
+                        <span>⛽ Petrol</span>
+                    </div>
+                    <p class="vehicle-description">Classic 4x4 with cult following. Well-maintained, rust-free example with clean history.</p>
+                    <div class="inventory-footer">
+                        <div class="price">$42,000</div>
+                        <a href="inquire.html" class="btn-small">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle 7 -->
+            <div class="inventory-card">
+                <div class="inventory-image">
+                    <div class="inventory-badge">Available</div>
+                </div>
+                <div class="inventory-details">
+                    <h3>2024 Tesla Model S Plaid</h3>
+                    <div class="vehicle-specs">
+                        <span>📍 USA</span>
+                        <span>⚙️ Automatic</span>
+                        <span>⚡ Electric</span>
+                    </div>
+                    <p class="vehicle-description">Ultimate electric performance sedan. Tri-motor, 1,020 HP, <2s 0-60 mph.</p>
+                    <div class="inventory-footer">
+                        <div class="price">$118,000</div>
+                        <a href="inquire.html" class="btn-small">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle 8 -->
+            <div class="inventory-card">
+                <div class="inventory-image">
+                    <div class="inventory-badge">Available</div>
+                </div>
+                <div class="inventory-details">
+                    <h3>2023 Audi RS6 Avant</h3>
+                    <div class="vehicle-specs">
+                        <span>📍 Germany</span>
+                        <span>⚙️ Automatic</span>
+                        <span>⛽ Petrol</span>
+                    </div>
+                    <p class="vehicle-description">Performance wagon combining practicality with supercar performance. Perfect daily driver.</p>
+                    <div class="inventory-footer">
+                        <div class="price">$128,000</div>
+                        <a href="inquire.html" class="btn-small">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle 9 -->
+            <div class="inventory-card">
+                <div class="inventory-image">
+                    <div class="inventory-badge">Available</div>
+                </div>
+                <div class="inventory-details">
+                    <h3>2022 Ferrari Roma</h3>
+                    <div class="vehicle-specs">
+                        <span>📍 Italy</span>
+                        <span>⚙️ Automatic</span>
+                        <span>⛽ Petrol</span>
+                    </div>
+                    <p class="vehicle-description">Elegant Italian grand tourer with 612 HP V8. Stunning Rosso Corsa over Beige.</p>
+                    <div class="inventory-footer">
+                        <div class="price">$245,000</div>
+                        <a href="inquire.html" class="btn-small">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Can't Find Section -->
+    <section class="cant-find-section">
+        <div class="container">
+            <h2>Can't Find What You're Looking For?</h2>
+            <p>Our inventory changes daily, and we have access to vehicles worldwide. Let us know what you're searching for, and we'll find it for you.</p>
+            <a href="inquire.html" class="btn-primary">Request Vehicle Search</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>STRAD & Co.</h3>
+                <p>Your trusted global partner in automotive import and export. Delivering excellence, reliability, and professional service since 2010.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="inquire.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Vehicle Import</a></li>
+                    <li><a href="services.html">Vehicle Export</a></li>
+                    <li><a href="services.html">Custom Clearance</a></li>
+                    <li><a href="services.html">Logistics</a></li>
+                    <li><a href="services.html">Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>📧 info@stradandco.com</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Trade Center, NY 10001</li>
+                    <li>🕐 Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 STRAD and Co. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>

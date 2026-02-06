@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquire - STRAD and Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <span>📧 info@stradandco.com</span>
+                <span>📞 +1 (555) 123-4567</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">STRAD</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="inquire.html" class="cta-button active">Inquire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Get In Touch</h1>
+            <p>Let's discuss how we can help with your automotive import or export needs</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container">
+        <div class="contact-layout">
+            
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <p class="form-intro">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Interested In *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="import">Vehicle Import</option>
+                            <option value="export">Vehicle Export</option>
+                            <option value="sourcing">Vehicle Sourcing</option>
+                            <option value="documentation">Documentation Services</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Your Country *</label>
+                        <input type="text" id="country" name="country" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell us about your requirements, the vehicle you're interested in, or any questions you have..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" name="newsletter" value="yes">
+                            Subscribe to our newsletter for market insights and exclusive offers
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-full">Send Message</button>
+                </form>
+
+                <div id="formSuccess" class="form-message success" style="display: none;">
+                    <p>✓ Thank you for your inquiry! We'll be in touch within 24 hours.</p>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info-container">
+                <h2>Contact Information</h2>
+                
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:info@stradandco.com">info@stradandco.com</a></p>
+                    <p class="contact-note">We respond to all emails within 24 hours</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                    <p class="contact-note">Mon-Fri: 9:00 AM - 6:00 PM EST</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">📍</div>
+                    <h3>Visit Us</h3>
+                    <p>123 Trade Center Drive<br>New York, NY 10001<br>United States</p>
+                    <p class="contact-note">By appointment only</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p><a href="#">+1 (555) 123-4567</a></p>
+                    <p class="contact-note">Fast response for urgent inquiries</p>
+                </div>
+
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">LinkedIn</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="background: var(--bg-light); padding: 80px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How long does the import process take?</h3>
+                    <p>Typically 4-8 weeks from purchase to delivery, depending on origin country, shipping method, and customs clearance. We provide timeline estimates for your specific situation.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you handle all customs paperwork?</h3>
+                    <p>Yes, we manage all documentation including customs forms, compliance certificates, EPA/DOT requirements, and any other necessary paperwork for your jurisdiction.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What are your fees?</h3>
+                    <p>Our fees vary based on vehicle value, origin, and services required. We provide transparent quotes with no hidden costs. Contact us for a detailed breakdown.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can you source specific vehicles?</h3>
+                    <p>Absolutely! We have access to dealers, auctions, and private sellers worldwide. Tell us your requirements and budget, and we'll find the perfect match.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you offer inspection services?</h3>
+                    <p>Yes, we arrange pre-purchase inspections through trusted local partners to ensure the vehicle condition meets your expectations before purchase.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept wire transfers, letters of credit, and can arrange escrow services for your security. Payment terms are flexible based on transaction size.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>STRAD & Co.</h3>
+                <p>Your trusted global partner in automotive import and export. Delivering excellence, reliability, and professional service since 2010.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="inquire.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Vehicle Import</a></li>
+                    <li><a href="services.html">Vehicle Export</a></li>
+                    <li><a href="services.html">Custom Clearance</a></li>
+                    <li><a href="services.html">Logistics</a></li>
+                    <li><a href="services.html">Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>📧 info@stradandco.com</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Trade Center, NY 10001</li>
+                    <li>🕐 Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 STRAD and Co. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hide form and show success message
+            this.style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+            
+            // In a real implementation, you would send the form data to a server here
+            console.log('Form submitted');
+            
+            // Reset form after 3 seconds and show it again
+            setTimeout(() => {
+                this.reset();
+                this.style.display = 'block';
+                document.getElementById('formSuccess').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
