@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRAD and Co. - Global Car Import & Export</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #34193A;
+            --secondary: #4a2552;
+            --accent: #c9a961;
+            --accent-light: #e4d4a8;
+            --text: #2c3e50;
+            --text-light: #6b7c93;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e1e8ed;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Work Sans', sans-serif; color: var(--text); line-height: 1.6; background: var(--bg); }
+        
+        /* Header */
+        header { background: white; box-shadow: 0 2px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1400px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; height: 90px; }
+        
+        .logo { display: block; transition: transform 0.3s; }
+        .logo:hover { transform: scale(1.05); }
+        .logo img { height: 60px; width: auto; display: block; }
+        
+        .nav-links { display: flex; list-style: none; gap: 45px; align-items: center; }
+        .nav-links a { color: var(--text); text-decoration: none; font-weight: 500; font-size: 15px; letter-spacing: 0.5px; transition: color 0.3s; position: relative; }
+        .nav-links a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--accent); }
+        .nav-links a.active::after { width: 100%; }
+        .cta-button { background: var(--accent); color: white !important; padding: 12px 30px; border-radius: 4px; font-weight: 600; transition: all 0.3s; }
+        .cta-button:hover { background: var(--primary); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3); }
+        .cta-button::after { display: none; }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 100px 40px 80px; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>'); opacity: 0.5; }
+        .hero-content { max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 68px; font-weight: 300; margin-bottom: 20px; letter-spacing: 2px; animation: fadeInUp 0.8s ease-out; }
+        .hero p { font-size: 20px; opacity: 0.95; max-width: 700px; margin-bottom: 30px; animation: fadeInUp 0.8s ease-out 0.2s backwards; }
+        .hero-buttons { display: flex; gap: 20px; animation: fadeInUp 0.8s ease-out 0.4s backwards; }
+        .btn-primary, .btn-secondary { padding: 15px 35px; border-radius: 4px; text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-block; }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover { background: var(--accent-light); color: var(--primary); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3); }
+        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+        .btn-secondary:hover { background: white; color: var(--primary); }
+        
+        /* Main Content */
+        .container { max-width: 1400px; margin: 0 auto; padding: 80px 40px; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-title { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: var(--primary); margin-bottom: 15px; letter-spacing: 1px; }
+        .section-subtitle { color: var(--text-light); font-size: 18px; }
+        
+        /* Services Grid */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .service-card { background: white; padding: 40px; border-radius: 8px; text-align: center; transition: all 0.4s; border: 2px solid var(--border); }
+        .service-card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+        .service-icon { font-size: 50px; margin-bottom: 20px; }
+        .service-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--primary); margin-bottom: 15px; }
+        .service-description { color: var(--text-light); line-height: 1.8; margin-bottom: 20px; }
+        .service-link { color: var(--accent); text-decoration: none; font-weight: 600; transition: gap 0.3s; display: inline-flex; align-items: center; gap: 5px; }
+        .service-link:hover { gap: 10px; }
+        
+        /* CTA Section */
+        .cta-section { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 80px 40px; text-align: center; }
+        .cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; margin-bottom: 20px; }
+        .cta-section p { font-size: 18px; margin-bottom: 30px; opacity: 0.95; }
+        
+        /* Footer */
+        footer { background: var(--primary); color: white; padding: 60px 40px 30px; }
+        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 40px; }
+        .footer-section h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 20px; color: var(--accent-light); }
+        .footer-section p { opacity: 0.9; line-height: 1.8; margin-bottom: 20px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: white; text-decoration: none; opacity: 0.85; transition: all 0.3s; }
+        .footer-links a:hover { opacity: 1; color: var(--accent-light); padding-left: 5px; }
+        .footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; opacity: 0.8; font-size: 14px; }
+        .footer-bottom a { color: var(--accent-light); text-decoration: none; }
+        
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-content { grid-template-columns: 1fr 1fr; gap: 40px; }
+        }
+        @media (max-width: 768px) {
+            nav { padding: 0 20px; height: 70px; }
+            .logo img { height: 45px; }
+            .nav-links { gap: 20px; font-size: 14px; }
+            .hero h1 { font-size: 42px; }
+            .section-title { font-size: 36px; }
+            .footer-content { grid-template-columns: 1fr; gap: 30px; }
+            .hero-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="strad_logo.jpg" alt="STRAD & Co.">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="inquire.html" class="cta-button">Inquire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Global Excellence in<br>Automotive Trade</h1>
+            <p>Your trusted partner for seamless car import and export services worldwide. From luxury vehicles to commercial fleets, we deliver with precision and professionalism.</p>
+            <div class="hero-buttons">
+                <a href="inventory.html" class="btn-primary">View Inventory</a>
+                <a href="inquire.html" class="btn-secondary">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive solutions for all your automotive trade needs</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🌍</div>
+                <h3 class="service-title">Global Import</h3>
+                <p class="service-description">End-to-end import services from any country, handling customs, documentation, and compliance with local regulations.</p>
+                <a href="services.html" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✈️</div>
+                <h3 class="service-title">Export Solutions</h3>
+                <p class="service-description">Seamless export services to international markets with full logistics support and regulatory expertise.</p>
+                <a href="services.html" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3 class="service-title">Vehicle Sourcing</h3>
+                <p class="service-description">Access our global network to find the exact vehicle you need, from luxury cars to commercial fleets.</p>
+                <a href="services.html" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3 class="service-title">Documentation</h3>
+                <p class="service-description">Complete handling of all paperwork, certificates, and compliance documents for hassle-free transactions.</p>
+                <a href="services.html" class="service-link">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Contact us today for a consultation and discover how we can help you navigate the global automotive market.</p>
+            <a href="inquire.html" class="btn-primary">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>STRAD & Co.</h3>
+                <p>Your trusted global partner in automotive import and export. Delivering excellence, reliability, and professional service since 2010.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="inquire.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Vehicle Import</a></li>
+                    <li><a href="services.html">Vehicle Export</a></li>
+                    <li><a href="services.html">Custom Clearance</a></li>
+                    <li><a href="services.html">Logistics</a></li>
+                    <li><a href="services.html">Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>📧 info@stradandco.com</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Trade Center, NY 10001</li>
+                    <li>🕐 Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 STRAD and Co. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>
